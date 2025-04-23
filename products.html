@@ -1,0 +1,29 @@
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Danh sách điện thoại</title>
+  <link rel="stylesheet" href="../css/products.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">📱 Cửa hàng Điện Thoại</h1>
+    <div class="filters">
+      <input type="text" id="search" placeholder="🔍 Tìm kiếm sản phẩm..." />
+      <select id="brandFilter"></select>
+      <select id="sortPrice">
+        <option value="">🔃 Sắp xếp theo giá</option>
+        <option value="asc">⬆️ Giá tăng dần</option>
+        <option value="desc">⬇️ Giá giảm dần</option>
+      </select>
+    </div>
+  </header>
+  <main>
+    <div id="productList" class="product-grid"></div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 Cửa hàng Điện Thoại</p>
+  </footer>
+  <script src="../js/products.js"></script>
+</body>
+</html>

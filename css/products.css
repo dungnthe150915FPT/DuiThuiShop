@@ -1,0 +1,64 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: #0066cc;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .title {
+    margin: 0.2em 0;
+    font-size: 28px;
+  }
+  
+  .filters {
+    margin-top: 1em;
+  }
+  
+  input, select {
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 2em;
+  }
+  
+  .product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    transition: transform 0.2s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 14px;
+  }
+  
