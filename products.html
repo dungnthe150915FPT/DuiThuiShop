@@ -1,29 +1,54 @@
+<!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8" />
-  <title>Danh sách điện thoại</title>
-  <link rel="stylesheet" href="../css/products.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danh sách sản phẩm</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
   <header class="header">
-    <h1 class="title">📱 Cửa hàng Điện Thoại</h1>
-    <div class="filters">
-      <input type="text" id="search" placeholder="🔍 Tìm kiếm sản phẩm..." />
-      <select id="brandFilter"></select>
-      <select id="sortPrice">
-        <option value="">🔃 Sắp xếp theo giá</option>
-        <option value="asc">⬆️ Giá tăng dần</option>
-        <option value="desc">⬇️ Giá giảm dần</option>
-      </select>
+    <div class="container">
+      <div class="logo">
+        <img src="https://img.pikbest.com/png-images/20210501/cute-cow-playing-guitar-cartoon_5899558.png!f305cw"
+          alt="Logo">
+        <h1>Shop Dúi Thúi</h1>
+        <nav>
+          <a href="./">Trang chủ</a>
+          <a href="#">Thông tin shop</a>
+          <a href="/products.html">Sản phẩm</a>
+          <a href="#">Hãng điện thoại</a>
+          <a href="#">Bài đăng</a>
+        </nav>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="glyphicon glyphicon-shopping-cart"></i> Giỏ hàng</a></li>
+      </ul>
     </div>
   </header>
-  <main>
-    <div id="productList" class="product-grid"></div>
-  </main>
+
+  <div class="filters">
+    <input type="text" id="search" placeholder="🔍 Tìm kiếm sản phẩm...">
+    <select id="brandFilter">
+      <option value="">-- Tất cả hãng --</option>
+    </select>
+    <select id="sortPrice">
+      <option value="">Sắp xếp theo giá</option>
+      <option value="asc">Giá tăng dần</option>
+      <option value="desc">Giá giảm dần</option>
+    </select>
+  </div>
+
+  <div id="productList" class="product-list"></div>
+  <div id="pagination" class="pagination"></div>
+
   <footer class="footer">
-    <p>&copy; 2025 Cửa hàng Điện Thoại</p>
+    &copy; 2025 Shop Điện Thoại. All rights reserved.
   </footer>
-  <script src="../js/products.js"></script>
+
+  <script src="js/script.js"></script>
 </body>
+
 </html>
