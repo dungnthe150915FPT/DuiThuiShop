@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chi tiết sản phẩm</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/productdetailed.css">
 </head>
+
 <body>
-  <header>
-    <h1>Chi tiết sản phẩm</h1>
-    <a href="../products/index.html">← Quay lại danh sách</a>
-  </header>
-  <main>
-    <div id="productDetail" class="product-detail"></div>
-  </main>
-  <footer>
-    <p>&copy; 2025 Cửa hàng Điện Thoại</p>
-  </footer>
-  <script src="../js/productdetaled.js"></script>
+  <!-- Header -->
+  <header class="header"></header>
+
+  <!-- Chi tiết sản phẩm -->
+  <div class="product-detail-container">
+    <div class="product-detail-main">
+      <div class="slideshow-container">
+        <div id="slideshow" class="slideshow"></div>
+      </div>
+      <div class="product-summary">
+        <h1 id="productName"></h1>
+        <p id="productBrand"></p>
+        <p class="price" id="productPrice"></p>
+        <button id="showDetails" class="btn-show-details">Xem thông cấu hình</button>
+      </div>
+    </div>
+
+    <div class="product-description">
+      <h2>Mô tả sản phẩm</h2>
+      <p id="productDescription"></p>
+    </div>
+  </div>
+
+  <!-- Popup thông tin sản phẩm -->
+  <div id="productPopup" class="popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close">&times;</span>
+      <div id="productDetail" class="product-detail"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer"></footer>
+
+  <script src="js/productdetailed.js"></script>
 </body>
+
 </html>

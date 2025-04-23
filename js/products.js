@@ -36,13 +36,23 @@ const renderProducts = (products) => {
     const card = document.createElement("div");
     card.className = "product-card";
 
+    // card.innerHTML = `
+    //   <img src="${img}" alt="${product["tên"]}">
+    //   <h3>${product["tên"]}</h3>
+    //   <p>Hãng: <strong>${product["hãng"]}</strong></p>
+    //   <p class="price">${parseInt(product["giá bán"]).toLocaleString()}₫</p>
+    //   <button>Xem chi tiết</button>
+    // `;
     card.innerHTML = `
-      <img src="${img}" alt="${product["tên"]}">
-      <h3>${product["tên"]}</h3>
-      <p>Hãng: <strong>${product["hãng"]}</strong></p>
-      <p class="price">${parseInt(product["giá bán"]).toLocaleString()}₫</p>
-      <button>Xem chi tiết</button>
-    `;
+  <img src="${img}" alt="${product["tên"]}">
+  <h3>${product["tên"]}</h3>
+  <p>Hãng: <strong>${product["hãng"]}</strong></p>
+  <p class="price">${parseInt(product["giá bán"]).toLocaleString()}₫</p>
+  <a href="./productdetailed.html?id=${product["id"]}">
+    <button>Xem chi tiết</button>
+  </a>
+`;
+
     productList.appendChild(card);
   });
 
@@ -133,3 +143,16 @@ const applyFilters = () => {
     applyFilters();
   });
 })();
+
+fetch("components/header.html")
+.then(response => response.text())
+.then(data => {
+  document.querySelector("header").outerHTML = data;
+});
+
+// Import footer
+fetch("components/footer.html")
+.then(response => response.text())
+.then(data => {
+  document.querySelector("footer").outerHTML = data;
+});

@@ -41,7 +41,9 @@ const renderProducts = (products) => {
       <h3>${product["tên"]}</h3>
       <p>Hãng: <strong>${product["hãng"]}</strong></p>
       <p class="price">${parseInt(product["giá bán"]).toLocaleString()}₫</p>
-      <button>Xem chi tiết</button>
+        <a href="./productdetailed.html?id=${product["id"]}">
+    <button>Xem chi tiết</button>
+  </a>
     `;
     productList.appendChild(card);
   });
@@ -133,3 +135,16 @@ const applyFilters = () => {
     applyFilters();
   });
 })();
+
+fetch("components/header.html")
+.then(response => response.text())
+.then(data => {
+  document.querySelector("header").outerHTML = data;
+});
+
+// Import footer
+fetch("components/footer.html")
+.then(response => response.text())
+.then(data => {
+  document.querySelector("footer").outerHTML = data;
+});

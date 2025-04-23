@@ -1,0 +1,22 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #fff0f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Đảm bảo chiều cao tối thiểu của body là 100% chiều cao màn hình */
+}
+
+main {
+  flex: 1; /* Đẩy footer xuống cuối trang */
+}
+
+footer {
+  background-color: #ff69b4;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
